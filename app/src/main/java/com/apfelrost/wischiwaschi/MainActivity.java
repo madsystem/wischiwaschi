@@ -27,6 +27,9 @@ public class MainActivity extends ActionBarActivity
             mGLView = new GLSurfaceView(this);
             mGLView.setEGLContextClientVersion(2);
             mGLView.setPreserveEGLContextOnPause(true);
+
+            mGLView.setEGLConfigChooser(8 , 8, 8, 8, 16, 0);
+
             mGLView.setRenderer(new GLRenderer());
             setContentView(mGLView);
         }
